@@ -27,8 +27,13 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# APP设置入口，新的APP必须要加到这里告诉Django
 INSTALLED_APPS = [
+    'typeidea',
+    'blog',
+    'config',
+    'comment',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -1,6 +1,7 @@
 from .base import *  # NOQA
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# 测试数据库设置
 DEBUG = True
 DATABASES = {
     'default': {
