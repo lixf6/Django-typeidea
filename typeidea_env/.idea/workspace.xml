@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7814ee9d-3f6f-4d6a-b2cc-19d770d4a082" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/adminforms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/base_admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/custom_site.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/config/blocks/sidebar _posts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/config/blocks/sidebar_comments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lib/site-packages/django/views/debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lib/site-packages/django/views/debug.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/config/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/config/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/settings/develop.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/settings/develop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,7 +104,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
