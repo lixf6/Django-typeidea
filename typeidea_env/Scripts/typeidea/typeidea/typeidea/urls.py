@@ -29,7 +29,7 @@ urlpatterns = [
     url(r'^category/(?P<category_id>\d+)/$', CategoryView.as_view(), name='category-list'),  # 分类列表页
     url(r'^tag/(?P<tag_id>\d+)/$', TagView.as_view(), name='tag-list'),  # 标签列表页
     url(r'^post/(?P<post_id>\d+).html$', PostDetailView.as_view(), name='post-detail'),  # 博客详情页
-    url(r'links/$', links, name='links'),  # 友链展示页
+    url(r'^links/$', links, name='links'),  # 友链展示页
     url(r'^super_admin/', admin.site.urls, name='super-admin'),  # 用户、权限后台
     url(r'^admin/', custom_site.urls, name='admin'),  # 文章、分类、标签后台
 ]

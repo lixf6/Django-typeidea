@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7814ee9d-3f6f-4d6a-b2cc-19d770d4a082" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/config/blocks/sidebar _posts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/config/blocks/sidebar_comments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/default/templates/blog/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/default/templates/blog/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/default/templates/blog/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/default/templates/config/blocks/sidebar _posts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/default/templates/config/blocks/sidebar_comments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/config/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/config/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/blog/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/blog/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/blog/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/config/blocks/sidebar _posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/config/blocks/sidebar _posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/config/blocks/sidebar_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/config/blocks/sidebar_comments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,11 +39,15 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="D:/flask/flask-carmen" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\django\typeidea_env\Scripts\typeidea\typeidea\typeidea\themes\bootstrap" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\django\typeidea_env\Scripts\typeidea\typeidea\typeidea\themes\default" />
       <recent name="D:\django\typeidea_env\Scripts\typeidea\typeidea\typeidea\settings" />
       <recent name="D:\django\typeidea_env\Scripts\typeidea\typeidea\typeidea\base.py" />
       <recent name="D:\django\typeidea_env\Scripts\typeidea\typeidea\typeidea\base" />

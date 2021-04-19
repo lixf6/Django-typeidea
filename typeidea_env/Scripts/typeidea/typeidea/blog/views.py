@@ -25,7 +25,7 @@ class IndexView(CommonViewMixin, ListView):
 
 
 class CategoryView(IndexView):
-    def get_context_data(self, **kwargs):
+    def get_context_data(self, **kwargs):  # 用来获取上下文数据－并最终将其传入模板
         context = super().get_context_data(**kwargs)
         category_id = self.kwargs.get('category_id')
         category = get_object_or_404(Category, pk=category_id)
@@ -51,7 +51,7 @@ class TagView(IndexView):
         })
         return context
 
-    def get_queryset(self):
+    def get_queryset(self):  # 用来获取指定 Mode Query Set 的数据
         """重写queryset，根据标签过滤"""
         queryset = super().get_queryset()
         tag_id = self.kwargs.get('tag_id')
