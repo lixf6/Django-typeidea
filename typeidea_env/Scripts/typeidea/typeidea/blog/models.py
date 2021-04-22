@@ -97,19 +97,21 @@ class Post(models.Model):
     uv = models.PositiveIntegerField(default=1)
 
     class Meta:
+        """它的作用是配置 Model属性，比如 Post 这个
+        Model 通过 Meta 配置它的展示名称为文章，排序规 是根据 id 降序排列"""
         verbose_name = verbose_name_plural = "文章"
         ordering = ['-id']
 
     def __str__(self):
         return self.title
 
-    # def save(self, *args, **kwargs):
-    #     if self.is_md:
-    #         self.content_html = mistune.markdown(self.content)
-    #     else:
-    #         self.content_html = self.content
-    #     super().save(*args, **kwargs)
-    #
+    def save(self, *args, **kwargs):
+        if self.is_md:
+            self.content_html = mistune.markdown(self.content)
+        else:
+            self.content_html = self.content
+        super().save(*args, **kwargs)
+
     @staticmethod
     def get_by_tag(tag_id):
         try:

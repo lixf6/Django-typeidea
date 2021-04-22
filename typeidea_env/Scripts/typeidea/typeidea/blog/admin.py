@@ -50,9 +50,11 @@ class CategoryOwnerFilter(admin.SimpleListFilter):
     parameter_name = 'owner_category'
 
     def lookups(self, request, model_admin):
+        """返回要展示的内容和查询用的 id"""
         return Category.objects.filter(owner=request.user).values_list('id', 'name')
 
     def queryset(self, request, queryset):
+        """这里 QuerySet表页所有展示数据的合集，即 post的数据集"""
         category_id = self.value()
         if category_id:
             return queryset.filter(category_id=self.value())

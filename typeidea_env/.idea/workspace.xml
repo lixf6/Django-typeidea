@@ -2,19 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7814ee9d-3f6f-4d6a-b2cc-19d770d4a082" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/default/templates/blog/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/default/templates/blog/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/default/templates/blog/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/default/templates/config/blocks/sidebar _posts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/default/templates/config/blocks/sidebar_comments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/middleware/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/middleware/user_id.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/comment/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/comment/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/comment/templatetags/comment_block.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/comment/block.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/comment/result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/config/links.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/comment/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/comment/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/comment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/comment/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/config/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/config/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/blog/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/blog/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/blog/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/blog/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/config/blocks/sidebar _posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/config/blocks/sidebar _posts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/templates/config/blocks/sidebar_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/config/blocks/sidebar_comments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/blog/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/blog/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/config/blocks/sidebar_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap/templates/config/blocks/sidebar_comments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -39,7 +45,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/themes/bootstrap" />
+    <property name="last_opened_file_path" value="E:/学富个人/Python学习/《Django企业开发实战高效Python Web框架指南》PDF+源代码+胡阳/typeidea-master" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
@@ -65,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.urls">
     <configuration name="admin" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="typeidea_env" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -87,8 +93,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="urls" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="typeidea_env" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/typeidea/typeidea/typeidea/urls.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.urls" />
         <item itemvalue="Python.admin" />
       </list>
     </recent_temporary>

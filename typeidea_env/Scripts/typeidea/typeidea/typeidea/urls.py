@@ -18,18 +18,25 @@ from django.contrib import admin
 from django.urls import path
 
 # from blog.views import post_list, post_detail
-from config.views import links
+# from config.views import links
+from comment.views import CommentView
 from .custom_site import custom_site
 from blog.views import (
-    IndexView, CategoryView, TagView, PostDetailView,
+    IndexView, CategoryView, TagView, PostDetailView, SearchView, AuthorView,
 )
+from config.views import LinkListView
 
+# URL映射：让用户访问 URL 时把数据发送到我们定义的View
 urlpatterns = [
+    url(r'^comment/$', CommentView.as_view(), name='comment'),
+    url(r'^links/$', LinkListView.as_view(), name='links'),
+    url(r'^author/(?P<owner_id>\d+)/$', AuthorView.as_view(), name='author'),
+    url(r'^search/$', SearchView.as_view(), name='search'),  # 首页搜索
     url(r'^$', IndexView.as_view(), name='index'),  # 访问首页
     url(r'^category/(?P<category_id>\d+)/$', CategoryView.as_view(), name='category-list'),  # 分类列表页
     url(r'^tag/(?P<tag_id>\d+)/$', TagView.as_view(), name='tag-list'),  # 标签列表页
     url(r'^post/(?P<post_id>\d+).html$', PostDetailView.as_view(), name='post-detail'),  # 博客详情页
-    url(r'^links/$', links, name='links'),  # 友链展示页
+    # url(r'^links/$', links, name='links'),  # 友链展示页
     url(r'^super_admin/', admin.site.urls, name='super-admin'),  # 用户、权限后台
     url(r'^admin/', custom_site.urls, name='admin'),  # 文章、分类、标签后台
 ]

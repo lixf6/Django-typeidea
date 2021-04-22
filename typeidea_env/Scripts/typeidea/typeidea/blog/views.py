@@ -1,9 +1,15 @@
+from datetime import date
+
+from comment.forms import CommentForm
+from django.core.cache import cache
+from django.db.models import Q, F
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import ListView, DetailView
 from django.shortcuts import get_object_or_404
 from config.models import SideBar
 from .models import Tag, Post, Category
+from comment.models import Comment
 
 
 # Create your views here.
@@ -61,8 +67,81 @@ class TagView(IndexView):
 class PostDetailView(CommonViewMixin, DetailView):
     queryset = Post.latest_posts()
     template_name = 'blog/detail.html'
-    context_object_name = 'post'
+    context_object_name = 'post'  # 如何不设置此项，则需要直接使用object_list变量
     pk_url_kwarg = 'post_id'
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context.update({
+    #         'comment_form': CommentForm,
+    #         'comment_list': Comment.get_by_target(self.request.path),
+    #     })
+    #     return context
+
+    # def get(self, request, *args, **kwargs):
+    #     response = super().get(request, *args, **kwargs)
+    #     Post.objects.filter(pk=self.object.id).update(pv=F('pv') + 1, uv=F('uv') + 1)
+    #
+    #     # 调试用
+    #     from django.db import connection
+    #     print(connection.queries)
+    #     return response
+
+    def get(self, request, *args, **kwargs):
+        response = super().get(request, *args, **kwargs)
+        self.handle_visited()
+        return response
+
+    def handle_visited(self):
+        """借助缓存统计pv 和 uv"""
+        increase_pv = False
+        increase_uv = False
+        uid = self.request.uid
+        pv_key = 'pv:%s:%s' % (uid, self.request.path)
+        uv_key = 'uv:%s:%s:%s' % (uid, str(date.today()), self.request.path)
+
+        if not cache.get(pv_key):
+            increase_pv = True  # 如果uid获取不到，也就是没缓存时，则increase_pv为真
+            cache.set(pv_key, 1, 1*60)  # 1分钟有效
+
+        if not cache.get(uv_key):
+            increase_uv = True
+            cache.set(pv_key, 1, 24*60*60)  # 24小时有效
+
+        if increase_pv and increase_uv:
+            Post.objects.filter(pk=self.object.id).update(pv=F('pv') + 1, uv=F('uv') + 1)
+
+        elif increase_pv:
+            Post.objects.filter(pk=self.object.id).update(pv=F('pv') + 1)
+
+        elif increase_uv:
+            Post.objects.filter(pk=self.object.id).update(pv=F('uv') + 1)
+
+
+class SearchView(IndexView):
+    def get_context_data(self):  # 获取上下文数据并传入模板
+        context = super().get_context_data()
+        context.update({
+            'keyword': self.request.GET.get('keyword', '')
+        })
+        return context
+
+    def get_queryset(self):
+        """重写queryset，根据搜索过滤"""
+        queryset = super().get_queryset()
+        keyword = self.request.GET.get('keyword')
+        if not keyword:
+            return queryset
+        return queryset.filter(Q(title__icontains=keyword) | Q(desc__icontains=keyword))
+
+
+class AuthorView(IndexView):
+
+    def get_queryset(self):
+        """重写queryset，根据过滤"""
+        queryset = super().get_queryset()
+        author_id = self.request.GET.get('owner_id')
+        return queryset.filter(owner_id=author_id)
 #
 #
 # def post_list(request, category_id=None, tag_id=None):
