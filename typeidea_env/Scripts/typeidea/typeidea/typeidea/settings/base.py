@@ -29,6 +29,10 @@ ALLOWED_HOSTS = []
 # Application definition
 # APP设置入口，新的APP必须要加到这里告诉Django
 INSTALLED_APPS = [
+    # 'xadmin',
+    # 'crispy_forms',
+    # 'debug_toolbar',
+    'rest_framework',
     'typeidea',
     'blog',
     'config',
@@ -122,3 +126,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'themes', THEME, "static"),
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 2,
+}

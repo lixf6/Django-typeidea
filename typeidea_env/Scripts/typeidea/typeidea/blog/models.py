@@ -6,6 +6,7 @@ from __future__ import unicode_literals
 from django.contrib.auth.models import User
 from django.core.cache import cache
 from django.db import models
+from django.utils.functional import cached_property
 
 
 class Category(models.Model):
@@ -147,3 +148,7 @@ class Post(models.Model):
             result = cls.objects.filter(status=cls.STATUS_NORMAL).order_by('-pv')
             cache.set('hot_posts', result, 10 * 60)
         return result
+
+    # @cached_property
+    # def tags(self):
+    #     return ','.join(self.tag.values_list('name', flat=True))
