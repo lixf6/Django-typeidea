@@ -164,7 +164,6 @@ class PostAdmin(BaseOwnerAdmin):
     #     else:
     #         return False
 
-
 @admin.register(LogEntry, site=custom_site)
 class LogEntryAdmin(admin.ModelAdmin):
     """后台展示日志入口，对应admin/路径下"""

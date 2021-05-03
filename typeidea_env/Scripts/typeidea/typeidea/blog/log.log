@@ -1,0 +1,12 @@
+2021-05-01 09:48:27 AM - root - DEBUG -tests:  debug
+2021-05-01 09:48:27 AM - root - INFO -tests:  info
+2021-05-01 09:48:27 AM - root - WARNING -tests:  warning
+2021-05-01 09:48:27 AM - root - ERROR -tests:  error
+2021-05-01 09:48:27 AM - root - CRITICAL -tests:  critical
+2021-05-01 09:48:27 AM - root - DEBUG -tests:  log
+2021-05-01 09:48:44 AM - root - DEBUG -tests:  debug
+2021-05-01 09:48:44 AM - root - INFO -tests:  info
+2021-05-01 09:48:44 AM - root - WARNING -tests:  warning
+2021-05-01 09:48:44 AM - root - ERROR -tests:  error
+2021-05-01 09:48:44 AM - root - CRITICAL -tests:  critical
+2021-05-01 09:48:44 AM - root - DEBUG -tests:  log
